@@ -16,3 +16,34 @@ img {
   display: block;
   max-width: 100%;
 }
+
+.formDate {
+  display: flex;
+  justify-content: center;
+}
+
+#datetime-picker {
+  margin-right: 20px;
+}
+
+.timer {
+  display: flex;
+  justify-content: center;
+}
+
+.field {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  padding: 5px;
+}
+
+.value {
+  font-size: 40px;
+  margin-left: 5px;
+}
+
+.point {
+  font-size: 41px;
+  color: teal;
+}
