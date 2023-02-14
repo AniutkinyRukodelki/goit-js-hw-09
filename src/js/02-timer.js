@@ -75,10 +75,8 @@ function onInput() {
   btnStartTimer.setAttribute('disabled', true);
   if (userTime > newTime) {
     btnStartTimer.removeAttribute('disabled');
-    return;
   } else {
     window.alert('Please choose a date in the future');
-    return;
   }
 }
 
