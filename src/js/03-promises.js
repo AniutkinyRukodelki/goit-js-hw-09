@@ -21,13 +21,14 @@ function onFormSubmit(evt) {
   let {
     elements: { delay, step, amount },
   } = evt.currentTarget;
-  let elemDelay = Number(delay.value);
-  let elemStep = Number(step.value);
-  let elemAmount = Number(amount.value);
-  if (elemDelay < 0 || elemStep < 0 || elemAmount <= 0) {
-    alert('Date must be positive');
+  let elementsArray = [Number(delay.value), Number(step.value), Number(amount.value)];
+
+  const hasElements = elementsArray.includes(0);
+  if (hasElements) {
+  alert('Date must be positive');
     return;
-  }
+}
+ 
   for (let position = 1; position <= elemAmount; position++) {
     createPromise(position, elemDelay)
       .then(({ position, delay }) => {
